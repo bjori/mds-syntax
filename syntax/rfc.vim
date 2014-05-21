@@ -23,7 +23,8 @@ syn match rfcDots	/\v\.\.+\ze\d+$/ contained
 syn match rfcContents	/^\v\s+(([A-Z]\.)?([0-9]+\.?)+|Appendix|Full Copyright Statement).*(\n.*)?(\s|\.)\d+$/ contains=rfcDots
 syn keyword rfcNote	NOTE note: Note: NOTE: Notes Notes:
 " Highlight [sic] here so it won't be highlighted as rfcReference
-syn match rfcKeyword  "\(MUST\(\s*[ \n]\+\s*NOT\)*\|REQUIRED\|SHALL\(\s*[ \n]\+\s*NOT\)*\|SHOULD\(\s*[ \n]\+\s*NOT\)*\|RECOMMENDED\|MAY\|OPTIONAL\|\[sic\]\)"
+"syn match rfcKeyword  "\(MUST\(\s*[ \n]\+\s*NOT\)*\|REQUIRED\|SHALL\(\s*[ \n]\+\s*NOT\)*\|SHOULD\(\s*[ \n]\+\s*NOT\)*\|RECOMMENDED\|MAY\|OPTIONAL\|\[sic\]\)"
+syn match rfcKeyword  "\(MUST\(\s*[ \n]\+\s*NOT\)*\|REQUIRED\|SHALL\(\s*[ \n]\+\s*NOT\)*\|SHOULD\(\s*[ \n]\+\s*NOT\)*\|RECOMMENDED\|MAY\|OPTIONAL\|\[sic\]\|RS\(\s*[ \n]\+\s*\(MEMBER\|CONNECTION\|REQUEST\)\)*\|PRIMARY\|SECONDARY\|ARBITER\|PASSIVE\|READ\(\s*[ \n]\+\s*OPERATION\)\|SOCKET\|DRIVER\|LATENCY\|NEAREST\|NEAR\|ERROR\|DIRECT\(\s*[ \n]\+\s*CONNECTION\)\|NODE\|STANDALONE\|PIN\)"
 
 hi link rfcTitle	Title
 hi link rfcTheTitle	Type
